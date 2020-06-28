@@ -78,6 +78,8 @@ int main()
 			}
 			for (int i = 0; i < n; i++) delete[] a[i];
 			delete[] a;
+			for (int i = 0; i < n; i++) delete[] b[i];
+			delete[] b;
 			cout << endl << "Для продолжения нажмите любую клавишу..." << endl;
 			_getch();
 			system("cls");
@@ -99,6 +101,7 @@ int main()
 			//Обратный ход
 			back_app(n, x, mas);
 			//Вывод результата
+			cout << endl;
 			roots_out(n, order, x);
 			_getch();
 			system("cls");
@@ -120,7 +123,7 @@ int main()
 			delete[] a;
 			for (int i = 0; i < n; i++) delete[] b[i];
 			delete[] b;
-			cout << endl << "Тыкни чё-нибудь..." << endl;
+			cout << endl << "Для продолжения нажмите любую клавишу..." << endl;
 			_getch();
 			system("cls");
 			break;
@@ -189,6 +192,17 @@ int main()
 			int* j = con(d, x, n);
 			cout << endl << "Транспонированная матрица A на вектор B минус матрица 10*С на вектор D: ";
 			aout(j, n);
+			for (int i = 0; i < n; i++) delete[] a[i];
+			delete[] a;
+			for (int i = 0; i < n; i++) delete[] b[i];
+			delete[] b;
+			for (int i = 0; i < n; i++) delete[] tc[i];
+			delete[] tc;
+			delete[] c;
+			delete[] d;
+			delete[] z;
+			delete[] x;
+			delete[] j;
 			cout << endl << "Для продолжения нажмите любую клавишу..." << endl;
 			_getch();
 			system("cls");
