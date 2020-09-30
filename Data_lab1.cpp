@@ -182,7 +182,6 @@ tuple <DATE*, int> DateFin()
 
 void CheckDate(int** arr, int cnt)
 {
-    int months[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
     bool leap = false;
     for (int i = 0; i < cnt; i++)
     {
@@ -191,8 +190,8 @@ void CheckDate(int** arr, int cnt)
 
         if (arr[i][2] < 1) arr[i][0] = 0;
         else if (arr[i][1] < 1 || arr[i][1] > 12) arr[i][0] = 0;
-        else if ((arr[i][1] == months[0] || arr[i][1] == months[2] || arr[i][1] == months[4] || arr[i][1] == months[6] || arr[i][1] == months[7] || arr[i][1] == months[9] || arr[i][1] == months[11]) && arr[i][0] > 31) arr[i][0] = 0;
-        else if ((arr[i][1] == months[3] || arr[i][1] == months[5] || arr[i][1] == months[8] || arr[i][1] == months[10]) && arr[i][0] > 30) arr[i][0] = 0;
+        else if ((arr[i][1] == 1 || arr[i][1] == 3 || arr[i][1] == 5 || arr[i][1] == 7 || arr[i][1] == 8 || arr[i][1] == 10 || arr[i][1] == 12) && arr[i][0] > 31) arr[i][0] = 0;
+        else if ((arr[i][1] == 4 || arr[i][1] == 6 || arr[i][1] == 9 || arr[i][1] == 11) && arr[i][0] > 30) arr[i][0] = 0;
         else if (arr[i][1] == 2 && arr[i][0] > (28 + leap)) arr[i][0] = 0;
     }
 }
